@@ -3,6 +3,7 @@ resource "null_resource" "example" {
     type = "ssh"
     host = data.azurerm_public_ip.existing.ip_address
     user = "azureuser"
+    password = "12345"
   }
 
   provisioner "file" {
