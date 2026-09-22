@@ -1,8 +1,8 @@
 resource "null_resource" "example" {
   connection {
-    type = "ssh"
-    host = data.azurerm_public_ip.existing.ip_address
-    user = "azureuser"
+    type     = "ssh"
+    host     = data.azurerm_public_ip.existing.ip_address
+    user     = "azureuser"
     password = "12345"
   }
 
